@@ -8,7 +8,7 @@ pipeline {
 	stages {
 		stage('SCM Checkout'){
 			steps{
-        	git url: 'https://github.com/KorbiO/E-shop-project/tree/master/DiscoveryService'
+        	git credentialsId: 'gitPwd', url: 'https://github.com/KorbiO/E-shop-project'
         		}
     }
 		stage('Compile') {
